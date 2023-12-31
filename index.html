@@ -34,7 +34,8 @@
 </head>
 
 <body>
-    <h1>শুভ জন্মদিন মৌসুমী</h1>
+    <h1>শুভ জন্মদিন মৌসুমী <br><span style="font-size: 15px; color:pink"><span id="age_spn"></span> তম জন্মদিনের শুভেচ্ছা </span></h1>
+    
     <canvas id="birthday"></canvas>
 
     <script>
@@ -196,6 +197,18 @@
 
 
             })()
+
+
+            function calculateAge(birthYear) {
+                var currentYear = new Date().getFullYear();
+                var age = currentYear - birthYear;
+                return age;
+            }
+
+            // Example usage:
+            var birthYear = 2007; // Replace this with the person's actual birth year
+            var age = calculateAge(birthYear);
+            document.getElementById('age_spn').innerHTML = age;
     </script>
 
 </body>
